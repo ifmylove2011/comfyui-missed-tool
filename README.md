@@ -12,16 +12,16 @@ pip install -r requirements.txt
 ```
 
 ## Table of contents
-- [Image Queue Loader](#Image Queue Loader)
-- [Load Image alpha](#Load Image alpha)
+- [Image Queue Loader](#ImageQueueLoader)
+- [Load Image alpha](#LoadImagealpha)
 - [TrimBG](#TrimBG)
 
 
-### Image Queue Loader
+### ImageQueueLoader
 Load Images in Queue, it is possible to obtain metadata information, such as seed, from the generated images in a queue. 
 We can retrieve seeds sequentially during sequential execution.
 ![Image Queue Loader](./assets/loadqueue.png)
-### Load Image alpha
+### LoadImagealpha
 Load Image with alpha, it works when transparent images exits. Built-in load-image extension output is "RGB" default, not "RGBA".
 ![Load alpha](./assets/loadtrim.png)
 Of course, we can also use the built-in load image of Comfyui, but it needs to be used in conjunction with a mask.
