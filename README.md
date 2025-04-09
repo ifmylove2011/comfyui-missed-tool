@@ -15,6 +15,8 @@ pip install -r requirements.txt
 - [Image Queue Loader](#ImageQueueLoader)
 - [Load Image alpha](#LoadImagealpha)
 - [TrimBG](#TrimBG)
+- [TxtSave](#TxtSave)
+- [TrimBG](#TrimBG)
 
 
 ### ImageQueueLoader
@@ -31,6 +33,15 @@ We can also batch read images and process them. Better with [Load Image List Fro
 ![TrimBG1](./assets/trimbg1.png)
 And, Better to use with [ComfyUI_BiRefNet_ll](https://github.com/lldacing/ComfyUI_BiRefNet_ll)
 ![TrimBG2](./assets/load_biref_trim.png)
+### TxtSave
+Save txt file with input file path and name if "src_mode" enable.![txtSave](./assets/txt_save.png)
+### Scale
+Scale image to multiple pixels.
+A input picture pixels is 533 * 433, if base_pixel set 100, output will be 500 * 400.
+
+![scale_multi](./assets/scale_multi_pixels.png)
+
+
 
 ## Contributing
 
