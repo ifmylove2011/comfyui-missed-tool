@@ -16,7 +16,7 @@ pip install -r requirements.txt
 - [Load Image alpha](#LoadImagealpha)
 - [TrimBG](#TrimBG)
 - [TxtSave](#TxtSave)
-- [TrimBG](#TrimBG)
+- [ScaleMultiPixels](#ScaleMultiPixels)
 
 
 ### ImageQueueLoader
@@ -35,7 +35,7 @@ And, Better to use with [ComfyUI_BiRefNet_ll](https://github.com/lldacing/ComfyU
 ![TrimBG2](./assets/load_biref_trim.png)
 ### TxtSave
 Save txt file with input file path and name if "src_mode" enable.![txtSave](./assets/txt_save.png)
-### Scale
+### ScaleMultiPixels
 Scale image to multiple pixels.
 A input picture pixels is 533 * 433, if base_pixel set 100, output will be 500 * 400.
 
