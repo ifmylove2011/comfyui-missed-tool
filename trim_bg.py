@@ -1,6 +1,6 @@
 from itertools import zip_longest
 
-import torch
+from PIL import ImageColor
 
 from .image_transf import *
 
@@ -14,9 +14,10 @@ class TrimBGAdvanced:
         return {
             "required": {
                 "images": ("IMAGE",),
-                "mask": ("MASK",),
+                "mask": ("MASK", {"forceInput": False}),
                 "padding": ("INT", {"default": 0, "min": -1000, "max": 1000, "step": 1, }),
                 "alpha_thresold": ("INT", {"default": 0, "min": 0, "max": 255, "step": 1, }),
+                "fill_rbg": ("STRING", {"default": "", "multiline": False, "tooltip": "rbg value, such as #ffffff"}),
             }
         }
 
@@ -25,16 +26,16 @@ class TrimBGAdvanced:
     FUNCTION = "trim_bg"
     CATEGORY = "missing-tool"
 
-    def trim_bg(self, images, mask, padding=0, alpha_thresold=0):
+    def trim_bg(self, images, mask, padding=0, alpha_thresold=0, fill_rbg=''):
         crop_images = []
         if min(images.shape) > 1:  # batch
             for image, m in zip_longest(images, mask, fillvalue=None):
-                self.trim_bg_process(crop_images, image, m, padding, alpha_thresold)
+                self.trim_bg_process(crop_images, image, m, padding, alpha_thresold, fill_rbg)
         else:  # list
-            self.trim_bg_process(crop_images, images, mask, padding, alpha_thresold)
+            self.trim_bg_process(crop_images, images, mask, padding, alpha_thresold, fill_rbg)
         return crop_images
 
-    def trim_bg_process(self, crop_images, image, m, padding, alpha_thresold):
+    def trim_bg_process(self, crop_images, image, m, padding, alpha_thresold, fill_rbg):
         tensor_img = image.squeeze()
         img_src = None
         img_alpha = None
@@ -46,7 +47,7 @@ class TrimBGAdvanced:
             if m is not None:
                 image_rgb = tensor_to_pil(tensor_img).convert('RGBA')
                 mask_p = tensor_to_pil(1. - m)
-                print(f"image is {image_rgb.size}, mask is {m.shape}, mask_p is {mask_p.size}")
+                # print(f"image is {image_rgb.size}, mask is {m.shape}, mask_p is {mask_p.size}")
                 img_src = Image.composite(image_rgb, Image.new("RGBA", image_rgb.size), mask_p)
                 img_alpha = img_src
             else:
@@ -56,6 +57,11 @@ class TrimBGAdvanced:
                 img_alpha = Image.composite(image_rgb, Image.new("RGBA", image_rgb.size), image_l)
         bbox = self.get_bbox(img_alpha, alpha_thresold, padding)
         img_dst = img_src.crop(bbox)
+        if len(fill_rbg) > 6:
+            image_np = np.array(img_dst)
+            rgb = ImageColor.getrgb(fill_rbg)
+            image_np[image_np[:, :, 3] == 0] = [rgb[0], rgb[1], rgb[2], 255]
+            img_dst = Image.fromarray(image_np)
         crop_images.append(pil_to_tensor(img_dst))
         return crop_images
 
