@@ -1,7 +1,7 @@
 [project]
 name = "missed-tool"
 description = "A few tools for ComfyUI, perhaps it's exactly what you need."
-version = "1.0.1"
+version = "1.0.2"
 license = {file = "LICENSE"}
 dependencies = ["torch", "numpy", "Pillow"]
 
