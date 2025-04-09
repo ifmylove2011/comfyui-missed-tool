@@ -1,13 +1,13 @@
-# comfyui-missing-tool
+# comfyui-missed-tool
 A few tools for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), perhaps it's exactly what you need.
 
 ## Installation
 
-To install comfyui-missing-tool, clone the repository and install the dependencies:
+To install comfyui-missed-tool, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/ifmylove2011/comfyui-missing-tool.git
-cd comfyui-missing-tool
+git clone https://github.com/ifmylove2011/comfyui-missed-tool.git
+cd comfyui-missed-tool
 pip install -r requirements.txt
 ```
 
@@ -45,11 +45,11 @@ A input picture pixels is 533 * 433, if base_pixel set 100, output will be 500 *
 
 ## Contributing
 
-If you want to contribute to comfyui-missing-tool, please fork the repository and create a pull request with your changes.
+If you want to contribute to comfyui-missed-tool, please fork the repository and create a pull request with your changes.
 
 ## License
 
-comfyui-missing-tool is licensed under the MIT License. See the LICENSE file for more details.
+comfyui-missed-tool is licensed under the MIT License. See the LICENSE file for more details.
 
 ## Contact
 

@@ -1,15 +1,15 @@
 [project]
-name = "missing-tool"
+name = "missed-tool"
 description = "A few tools for ComfyUI, perhaps it's exactly what you need."
 version = "1.0.1"
 license = {file = "LICENSE"}
 dependencies = ["torch", "numpy", "Pillow"]
 
 [project.urls]
-Repository = "https://github.com/ifmylove2011/comfyui-missing-tool"
+Repository = "https://github.com/ifmylove2011/comfyui-missed-tool"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
 PublisherId = "ifmylove2011"
-DisplayName = "comfyui-missing-tool"
+DisplayName = "comfyui-missed-tool"
 Icon = ""
