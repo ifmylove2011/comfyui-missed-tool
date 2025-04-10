@@ -17,6 +17,7 @@ pip install -r requirements.txt
 - [TrimBG](#TrimBG)
 - [TxtSave](#TxtSave)
 - [ScaleMultiPixels](#ScaleMultiPixels)
+- [Lora Merge](#LoraMerge)
 
 
 ### ImageQueueLoader
@@ -40,7 +41,10 @@ Scale image to multiple pixels.
 A input picture pixels is 533 * 433, if base_pixel set 100, output will be 500 * 400.
 
 ![scale_multi](./assets/scale_multi_pixels.png)
-
+### LoraMerge
+Load Lora, Merge Load, and Save Lora.
+Combination is relatively more flexible, correspondingly, there are more nodes, totaling three!
+![lora_merge](./assets/lora_merge.png)
 
 
 ## Contributing

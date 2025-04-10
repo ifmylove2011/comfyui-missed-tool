@@ -24,7 +24,7 @@ class TrimBGAdvanced:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("image",)
     FUNCTION = "trim_bg"
-    CATEGORY = "missing-tool"
+    CATEGORY = "missed-tool"
 
     def trim_bg(self, images, mask, padding=0, alpha_thresold=0, fill_rbg=''):
         crop_images = []

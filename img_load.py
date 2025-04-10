@@ -20,7 +20,7 @@ class LoadImageA:
             }
         }
 
-    CATEGORY = "missing-tool"
+    CATEGORY = "missed-tool"
 
     RETURN_TYPES = ("IMAGE", "MASK", "STRING",)
     RETURN_NAMES = ("image", "mask", "image_path",)

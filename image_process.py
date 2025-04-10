@@ -18,7 +18,7 @@ class ScaleMultilplePixels:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("IMAGE",)
     FUNCTION = "execute"
-    CATEGORY = "missing-tool"
+    CATEGORY = "missed-tool"
 
     def execute(self, image, base_pixels, position):
         _, oh, ow, _ = image.shape

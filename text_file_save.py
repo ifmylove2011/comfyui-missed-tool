@@ -20,7 +20,7 @@ class TxtSave:
     OUTPUT_NODE = True
     RETURN_TYPES = ()
     FUNCTION = "save_txt_file"
-    CATEGORY = "missing-tool"
+    CATEGORY = "missed-tool"
 
     def save_txt_file(self, text, filename, encoding='utf-8', src_mode=True):
 
