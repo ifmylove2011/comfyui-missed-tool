@@ -28,7 +28,7 @@ class ImageQueueLoader:
     RETURN_TYPES = ("IMAGE", "METADATA_RAW",)
     RETURN_NAMES = ("image", "Metadata RAW",)
     FUNCTION = "load_images"
-    CATEGORY = "missing-tool"
+    CATEGORY = "missed-tool"
 
     current_index = 0
 
