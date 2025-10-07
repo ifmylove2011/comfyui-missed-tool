@@ -18,6 +18,7 @@ pip install -r requirements.txt
 - [TxtSave](#TxtSave)
 - [ScaleMultiPixels](#ScaleMultiPixels)
 - [Lora Merge](#LoraMerge)
+- [ColorImageFillRm Merge](#ColorImageFillRm)
 
 
 ### ImageQueueLoader
@@ -45,7 +46,9 @@ A input picture pixels is 533 * 433, if base_pixel set 100, output will be 500 *
 Load Lora, Merge Load, and Save Lora.
 Combination is relatively more flexible, correspondingly, there are more nodes, totaling three!
 ![lora_merge](./assets/lora_merge.png)
-
+### ColorImageFillRm
+Simple color replacement and removal of color pixels are useful in certain scenes where mask images are overlaid with layers.
+![color_image_fill_rm](./assets/color_image_fill_rm.png)
 
 ## Contributing
 

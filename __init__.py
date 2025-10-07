@@ -4,10 +4,12 @@ from .img_load import LoadImageA
 from .text_file_save import TxtSave
 from .image_process import ScaleMultilplePixels
 from .lora_merge import LoraLoader, LoraSaver, LoraMerger
+from .image_fill_rm import ColorImageFillRm
 
 NODE_CLASS_MAPPINGS = {
     "TrimBG": TrimBG,
     "TrimBGAdvanced": TrimBGAdvanced,
+    "ColorImageFillRm": ColorImageFillRm,
     "ImageQueueLoader": ImageQueueLoader,
     "LoadImageA": LoadImageA,
     "TxtSave": TxtSave,
@@ -20,6 +22,7 @@ NODE_CLASS_MAPPINGS = {
 NODE_DISPLAY_NAME_MAPPINGS = {
     "TrimBG": "TrimBG",
     "TrimBGAdvanced": "TrimBG Advanced",
+    "ColorImageFillRm": "Color Image Fill Rm",
     "ImageQueueLoader": "Image Queue Loader",
     "LoadImageA": "Load Image Alpha",
     "TxtSave": "Save Txt File",
