@@ -16,6 +16,7 @@ pip install -r requirements.txt
 - [Load Image alpha](#LoadImagealpha)
 - [TrimBG](#TrimBG)
 - [TxtSave](#TxtSave)
+- [TextSplit](#TextSplit)
 - [ScaleMultiPixels](#ScaleMultiPixels)
 - [Lora Merge](#LoraMerge)
 - [ColorImageFillRm](#ColorImageFillRm)
