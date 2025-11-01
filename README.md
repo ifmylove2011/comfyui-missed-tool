@@ -18,7 +18,7 @@ pip install -r requirements.txt
 - [TxtSave](#TxtSave)
 - [ScaleMultiPixels](#ScaleMultiPixels)
 - [Lora Merge](#LoraMerge)
-- [ColorImageFillRm Merge](#ColorImageFillRm)
+- [ColorImageFillRm](#ColorImageFillRm)
 
 
 ### ImageQueueLoader
@@ -37,10 +37,11 @@ And, Better to use with [ComfyUI_BiRefNet_ll](https://github.com/lldacing/ComfyU
 ![TrimBG2](./assets/load_biref_trim.png)
 ### TxtSave
 Save txt file with input file path and name if "src_mode" enable.![txtSave](./assets/txt_save.png)
+### TextSplitToList
+Splitting a text or string into a list, you can use regular expressions to cut any string and output the list and the result after removing the delimiter.
 ### ScaleMultiPixels
 Scale image to multiple pixels.
 A input picture pixels is 533 * 433, if base_pixel set 100, output will be 500 * 400.
-
 ![scale_multi](./assets/scale_multi_pixels.png)
 ### LoraMerge
 Load Lora, Merge Load, and Save Lora.
