@@ -1,7 +1,7 @@
 from .trim_bg import TrimBG, TrimBGAdvanced
 from .img_queue_load import ImageQueueLoader
 from .img_load import LoadImageA
-from .text_file_save import TxtSave
+from .text_file_save import TxtSave, TextSplitToList
 from .image_process import ScaleMultilplePixels
 from .lora_merge import LoraLoader, LoraSaver, LoraMerger
 from .image_fill_rm import ColorImageFillRm
@@ -13,6 +13,7 @@ NODE_CLASS_MAPPINGS = {
     "ImageQueueLoader": ImageQueueLoader,
     "LoadImageA": LoadImageA,
     "TxtSave": TxtSave,
+    "TextSplitToList": TextSplitToList,
     "ScaleMultilplePixels": ScaleMultilplePixels,
     "LoraLoad": LoraLoader,
     "LoraMerge": LoraMerger,
@@ -26,6 +27,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageQueueLoader": "Image Queue Loader",
     "LoadImageA": "Load Image Alpha",
     "TxtSave": "Save Txt File",
+    "TextSplitToList": "Text Split",
     "ScaleMultilplePixels": "Scale Image to Multilple Pixels",
     "LoraLoad": "Lora Load",
     "LoraMerge": "Lora Merge",
