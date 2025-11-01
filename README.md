@@ -39,6 +39,7 @@ And, Better to use with [ComfyUI_BiRefNet_ll](https://github.com/lldacing/ComfyU
 Save txt file with input file path and name if "src_mode" enable.![txtSave](./assets/txt_save.png)
 ### TextSplitToList
 Splitting a text or string into a list, you can use regular expressions to cut any string and output the list and the result after removing the delimiter.
+![txtSplit](./assets/text_split_to_list.png)
 ### ScaleMultiPixels
 Scale image to multiple pixels.
 A input picture pixels is 533 * 433, if base_pixel set 100, output will be 500 * 400.
