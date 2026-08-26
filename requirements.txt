@@ -1,3 +1,7 @@
 torch
 numpy
 Pillow
+face_recognition
+insightface
+onnxruntime-gpu
+opencv-python
