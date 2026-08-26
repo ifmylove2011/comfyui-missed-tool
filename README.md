@@ -20,6 +20,7 @@ pip install -r requirements.txt
 - [ScaleMultiPixels](#ScaleMultiPixels)
 - [Lora Merge](#LoraMerge)
 - [ColorImageFillRm](#ColorImageFillRm)
+- [Face Similarity Check](#FaceSimilarityCheck)
 
 
 ### ImageQueueLoader
@@ -52,6 +53,18 @@ Combination is relatively more flexible, correspondingly, there are more nodes, 
 ### ColorImageFillRm
 Simple color replacement and removal of color pixels are useful in certain scenes where mask images are overlaid with layers.
 ![color_image_fill_rm](./assets/color_image_fill_rm.png)
+
+### FaceSimilarityCheck
+Compare an input face against the images in a reference directory. The nodes return similarity scores, the best-matching filename, a readable Top-K report, and JSON results for use in downstream workflows. Reference embeddings are cached in `cache_dir` to speed up later runs.
+
+- **Face Similarity Check** uses `face_recognition` embeddings and cosine similarity.
+- **Face Similarity Check (Insight)** uses the InsightFace `buffalo_l` model.
+- **Face Similarity Check (Hybrid)** ranks with `face_recognition` similarity and applies an ArcFace penalty to obvious mismatches. Configure `arcface_penalty_threshold` and `penalty_factor` when you need stricter rejection.
+- **Face Identity Similarity (antelopev2)** builds a 512-dimensional identity centroid from `reference_dir`, can remove reference outliers, and returns `similarity`, `passed`, `best_match`, an aligned face crop, and a detailed report. This node requires the CUDA-enabled ONNX Runtime provider.
+
+Set `source_dir` (or `reference_dir`) to a directory containing reference images. PNG, JPG, JPEG, WebP, and, where supported, BMP files are accepted. A clear, front-facing reference set generally produces the most stable results.
+
+![Face Similarity Check](./assets/face_similarity_check.png)
 
 ## Contributing
 

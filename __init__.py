@@ -5,6 +5,7 @@ from .text_file_save import TxtSave, TextSplitToList
 from .image_process import ScaleMultilplePixels
 from .lora_merge import LoraLoader, LoraSaver, LoraMerger
 from .image_fill_rm import ColorImageFillRm
+from .face_similarity_check import FaceRecSimilarityTopK, InsightFaceSimilarityTopK, HybridFaceSimilarityTopK, FaceIdentitySimilarity
 
 NODE_CLASS_MAPPINGS = {
     "TrimBG": TrimBG,
@@ -15,6 +16,10 @@ NODE_CLASS_MAPPINGS = {
     "TxtSave": TxtSave,
     "TextSplitToList": TextSplitToList,
     "ScaleMultilplePixels": ScaleMultilplePixels,
+    "FaceSimilarityTopK": FaceRecSimilarityTopK,
+    "InsightFaceSimilarityTopK": InsightFaceSimilarityTopK,
+    "HybridFaceSimilarityTopK": HybridFaceSimilarityTopK,
+    "FaceIdentitySimilarity": FaceIdentitySimilarity,
     "LoraLoad": LoraLoader,
     "LoraMerge": LoraMerger,
     "LoraSaver": LoraSaver,
@@ -29,6 +34,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "TxtSave": "Save Txt File",
     "TextSplitToList": "Text Split",
     "ScaleMultilplePixels": "Scale Image to Multilple Pixels",
+    "FaceSimilarityTopK": "Face Similarity Check",
+    "InsightFaceSimilarityTopK": "Face Similarity Check(Insight)",
+    "HybridFaceSimilarityTopK": "Face Similarity Check(Hybrid)",
+    "FaceIdentitySimilarity": "Face Identity Similarity (antelopev2)",
     "LoraLoad": "Lora Load",
     "LoraMerge": "Lora Merge",
     "LoraSaver": "Lora Save",
