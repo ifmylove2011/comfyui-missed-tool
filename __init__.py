@@ -6,6 +6,7 @@ from .image_process import ScaleMultilplePixels
 from .lora_merge import LoraLoader, LoraSaver, LoraMerger
 from .image_fill_rm import ColorImageFillRm
 from .face_similarity_check import FaceRecSimilarityTopK, InsightFaceSimilarityTopK, HybridFaceSimilarityTopK, FaceIdentitySimilarity
+from .xy_plot import NODE_CLASS_MAPPINGS as XY_NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as XY_NODE_DISPLAY_NAME_MAPPINGS
 
 NODE_CLASS_MAPPINGS = {
     "TrimBG": TrimBG,
@@ -43,4 +44,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "LoraSaver": "Lora Save",
 }
 
-__all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
+NODE_CLASS_MAPPINGS.update(XY_NODE_CLASS_MAPPINGS)
+NODE_DISPLAY_NAME_MAPPINGS.update(XY_NODE_DISPLAY_NAME_MAPPINGS)
+
+WEB_DIRECTORY = "./web"
+
+__all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS', 'WEB_DIRECTORY']
